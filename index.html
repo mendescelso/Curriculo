@@ -1,200 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Currículo — Celso Mendes Lima</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Celso Mendes Lima</title>
   <style>
-    :root{
-      --bg:#f6f7fb; --card:#ffffff; --accent:#0b63d0; --muted:#6b7280;
-      --maxw:900px; --radius:12px; --pad:20px;
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
-      background:linear-gradient(180deg,var(--bg),#eef2f6); color:#0f1724;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      padding:32px; display:flex; justify-content:center;
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 40px;
     }
-    .container{width:100%; max-width:var(--maxw);}
-    .header{
-      display:flex; gap:20px; align-items:center; margin-bottom:18px;
+    header {
+      text-align: center;
+      border-bottom: 2px solid #0073b1;
+      padding-bottom: 20px;
     }
-    .photo{
-      width:96px; height:96px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#1177e6);
-      display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:28px;
-      flex-shrink:0;
+    header h1 {
+      margin: 0;
+      color: #0073b1;
+      font-size: 2em;
     }
-    .title h1{margin:0; font-size:22px}
-    .title p{margin:4px 0 0 0; color:var(--muted); font-size:14px}
-    .grid{display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:start;}
-    .card{background:var(--card); border-radius:var(--radius); padding:var(--pad); box-shadow: 0 6px 18px rgba(14,30,60,0.06);}
-    .section-title{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
-    .section-title h2{margin:0; font-size:16px; color:var(--accent)}
-    .muted{color:var(--muted); font-size:14px}
-    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef6ff; color:var(--accent); font-weight:600; font-size:13px}
-    ul{margin:0; padding-left:18px}
-    .skill-list{display:flex; flex-wrap:wrap; gap:8px}
-    .skill{background:#f3f7fb; padding:6px 10px; border-radius:999px; font-size:13px; color:#123}
-    .contact-item{font-size:14px; color:#0b1724; margin-bottom:6px}
-    .small{font-size:13px; color:var(--muted)}
-    .timeline{border-left:3px solid #eef2f6; padding-left:14px; margin-left:6px}
-    .timeline .item{margin-bottom:12px}
-    .project{margin-bottom:10px}
-    footer{margin-top:20px; text-align:center; color:var(--muted); font-size:13px}
-    @media(max-width:920px){
-      .grid{grid-template-columns: 1fr; }
-      .header{flex-direction:row; align-items:center}
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+    a {
+      color: #0073b1;
+      text-decoration: none;
+    }
+    h2 {
+      border-left: 4px solid #0073b1;
+      padding-left: 10px;
+      margin-top: 30px;
+      color: #0073b1;
+      font-size: 1.4em;
+    }
+    .section {
+      margin-top: 15px;
+    }
+    .job {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .job-company {
+      color: #555;
+      font-style: italic;
+    }
+    .job-period {
+      color: #888;
+      font-size: 0.95em;
+    }
+    ul {
+      margin-top: 8px;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <div class="photo" aria-hidden="true">CM</div>
-      <div class="title">
-        <h1>Celso Mendes Lima</h1>
-        <p class="muted">Tech Lead de Operações — Especialista em ambientes Linux, containers e observabilidade</p>
-        <div style="margin-top:8px">
-          <span class="badge">Tech Lead @ Nava (desde 08/2020)</span>
-        </div>
-      </div>
+    <header>
+      <img src="https://raw.githubusercontent.com/mendescelso/Curriculo/main/foto.png" alt="Foto de Celso Mendes Lima" class="profile-pic">
+      <h1>Celso Mendes Lima</h1>
+      <p>Site Reliability Engineer (SRE) / Tech Lead de Operações</p>
+      <p>📍 São Paulo, SP | 📧 <a href="mailto:celso.mendes.lima@gmail.com">celso.mendes.lima@gmail.com</a> | 💼 <a href="https://linkedin.com/in/mendescelso" target="_blank">linkedin.com/in/mendescelso</a></p>
     </header>
 
-    <div class="grid">
-      <!-- MAIN -->
-      <main>
-        <section class="card" aria-labelledby="sobre">
-          <div class="section-title"><h2 id="sobre">Resumo Profissional</h2></div>
-          <p class="small">
-            Tech Lead de Operações com experiência prática em gestão de equipe técnica, automação, containers (Docker), orquestração (Kubernetes), integração e monitoramento de aplicações (Kafka, Keycloak, ClickHouse). Atua desde 2020 como Tech Lead na Nava, coordenando 4 analistas e respondendo por ambientes críticos on-premises e cloud. Forte perfil operacional e voltado a melhoria contínua, documentação e capacitação da equipe.
-          </p>
-        </section>
+    <section class="section">
+      <h2>Resumo Profissional</h2>
+      <p>Profissional com mais de 10 anos de experiência em infraestrutura de TI, operações e confiabilidade de sistemas. Atualmente atuando como <strong>Site Reliability Engineer (SRE)</strong> e <strong>Tech Lead</strong> na NAVA, liderando uma equipe de analistas com foco em disponibilidade, automação, observabilidade e melhoria contínua de ambientes críticos on-premises e cloud.</p>
+    </section>
 
-        <section class="card" aria-labelledby="experiencia" style="margin-top:16px">
-          <div class="section-title"><h2 id="experiencia">Experiência</h2></div>
+    <section class="section">
+      <h2>Experiência Profissional</h2>
 
-          <div class="timeline">
-            <div class="item">
-              <strong>Tech Lead de Operações — Nava Technology</strong>
-              <div class="small">Ago 2020 — presente</div>
-              <ul>
-                <li>Liderança de equipe (4 analistas): supervisão técnica, orientações e gestão de entregas.</li>
-                <li>Responsável por ambientes on-prem e cloud, procedimentos de escalonamento, e documentação operacional.</li>
-                <li>Atuação em projetos com Kafka, Keycloak, Docker, Kubernetes, ClickHouse e Alma Platform.</li>
-                <li>Organização de processos de plantão, runbooks e tratativas em ambientes críticos (Ex.: OI/Vital).</li>
-              </ul>
-            </div>
+      <div class="job">
+        <div class="job-title">Site Reliability Engineer (SRE) / Tech Lead de Operações</div>
+        <div class="job-company">NAVA Technology for Business</div>
+        <div class="job-period">ago de 2020 - atualmente</div>
+        <ul>
+          <li>Liderança técnica de equipe com 4 analistas, atuando em ambientes híbridos (on-premises e cloud).</li>
+          <li>Responsável pela confiabilidade, observabilidade e automação de processos de infraestrutura.</li>
+          <li>Desenvolvimento de scripts e integrações para suporte a pipelines e monitoramento.</li>
+          <li>Criação de documentações técnicas, treinamentos internos e planos de desenvolvimento individuais.</li>
+          <li>Interação com clientes como ConectCar, Liberty, Claro EPS, Fidelity e outros ambientes corporativos.</li>
+        </ul>
+      </div>
 
-            <div class="item">
-              <strong>Analista de T.I. 3 — Soft Trade</strong>
-              <div class="small">Nov 2013 — Jan 2019</div>
-              <ul>
-                <li>Atividades de administração de sistemas, suporte avançado e projetos de infraestrutura.</li>
-              </ul>
-            </div>
+      <div class="job">
+        <div class="job-title">Analista de TI 3</div>
+        <div class="job-company">Soft Trade</div>
+        <div class="job-period">nov de 2013 - jan de 2019</div>
+        <ul>
+          <li>Administração de servidores Windows e Linux.</li>
+          <li>Gerenciamento e suporte de serviços </li>
+          <li>Gerenciamento de rede, suporte técnico e manutenção de banco de dados.</li>
+          <li>Monitoramento de aplicações e atendimento a incidentes de infraestrutura.</li>
+        </ul>
+      </div>
+    </section>
 
-            <div class="item">
-              <strong>Projetos e destaques</strong>
-              <ul>
-                <li>Criação do projeto pessoal <em>SkySmartFinanças</em> — estrutura em Docker para controle financeiro.</li>
-                <li>Desenvolvimento de scripts e automações: testes de conectividade (telnet), coleta de logs e rotinas de cron para execuções Yelum/Liberty com regras de não execução simultânea.</li>
-                <li>Condução de troubleshooting em ambiente Kubernetes (problemas de conectividade entre pods e IPs de rede).</li>
-                <li>Produção de material de capacitação e relatórios para times e clientes.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+    <section class="section">
+      <h2>Formação Acadêmica</h2>
+      <p><strong>Tecnólogo em Gestão da Tecnologia da Informação</strong> – Universidade Paulista
+(UNIP), Brasil</p>
+    </section>
 
-        <section class="card" aria-labelledby="educacao" style="margin-top:16px">
-          <div class="section-title"><h2 id="educacao">Formação & Cursos</h2></div>
-          <ul>
-            <li><strong>Tech Lead: gerindo pessoas e guiando para alta performance</strong> — 8h (25/06/2024 a 07/10/2024). Conteúdo: liderança técnica, mapeamento de competências, feedback, PDI e resolução de conflitos.</li>
-            <li>Formação e cursos complementares em administração de sistemas Linux, containers e orquestração (Docker, Kubernetes).</li>
-          </ul>
-        </section>
+   
+    <section class="section">
+      <h2>Competências Técnicas</h2>
+      <ul>
+        <li>Curso Azure gerencie Kubernetes com AKS e ACR - Alura</li>
+        <li>Curso Cadeia de valor de serviços_ conhecendo as 4 dimensões</li>
+        <li>Curso Criação de valor conhecendo os conceitos-chave para gerenciamento de serviços</li>
+        <li>Curso Docker criando e gerenciando containers</li>
+        <li>Curso Kubernetes Deployments, Volumes e Escalabilidade</li>
+        <li>Curso Kubernetes Pods, Services e ConfigMaps</li>
+        <li>Curso Docker criando e gerenciando containers</li>
+      </ul>
+    </section>
 
-        <section class="card" aria-labelledby="projetos" style="margin-top:16px">
-          <div class="section-title"><h2 id="projetos">Projetos Relevantes</h2></div>
-
-          <div class="project">
-            <strong>SkySmartFinanças</strong>
-            <div class="small">App/planilha para controle financeiro (em desenvolvimento)</div>
-            <p class="small">Estrutura em Docker para aplicação local, planilha de controle com integração de 3 cartões e aba para registro detalhado de compras. Plano de comercialização no futuro.</p>
-          </div>
-
-          <div class="project">
-            <strong>Automação de execuções Yelum/Liberty</strong>
-            <div class="small">Roteiro operacional</div>
-            <p class="small">Definição de agendamento e bloqueios para evitar execuções simultâneas, geração de relatórios automáticos e tratamento de durações longas (até 2 horas).</p>
-          </div>
-
-          <div class="project">
-            <strong>Documentação & Runbooks</strong>
-            <div class="small">Processos internos</div>
-            <p class="small">Formalização de processos de direcionamento de tickets dependentes do time de desenvolvimento, e melhoria no fluxo de escalonamento (NSD/GAS).</p>
-          </div>
-        </section>
-      </main>
-
-      <!-- SIDEBAR -->
-      <aside>
-        <div class="card" aria-labelledby="contato">
-          <div class="section-title"><h2 id="contato">Contato</h2></div>
-          <div class="contact-item"><strong>Telefone:</strong> (11) 96978-4382</div>
-          <div class="contact-item"><strong>Localidade:</strong> São Paulo, SP, Brasil</div>
-          <div class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/mendescelso" target="_blank" rel="noopener">github.com/mendescelso</a></div>
-          <div class="contact-item"><strong>Repositório (Currículo):</strong> <a href="https://github.com/mendescelso/Curriculo" target="_blank" rel="noopener">mendescelso/Curriculo</a></div>
-          <div style="margin-top:10px" class="small">Nascimento: 26/08/1985</div>
-        </div>
-
-        <div class="card" style="margin-top:16px" aria-labelledby="competencias">
-          <div class="section-title"><h2 id="competencias">Competências Técnicas</h2></div>
-
-          <div style="margin-bottom:8px" class="small">Áreas principais</div>
-          <div class="skill-list" style="margin-bottom:12px">
-            <span class="skill">Linux</span>
-            <span class="skill">Docker (v27.2.1)</span>
-            <span class="skill">Kubernetes</span>
-            <span class="skill">Kafka</span>
-            <span class="skill">Keycloak</span>
-            <span class="skill">ClickHouse</span>
-            <span class="skill">Alma Platform</span>
-            <span class="skill">Shell scripting</span>
-            <span class="skill">Git</span>
-            <span class="skill">Observability / Monitoring</span>
-          </div>
-
-          <div class="small" style="margin-bottom:6px">Ferramentas & práticas</div>
-          <ul class="small">
-            <li>Automação de rotinas, coleta de logs, troubleshooting em produção</li>
-            <li>Criação de runbooks e documentação operativa</li>
-            <li>Gestão de plantões e escalonamentos</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top:16px" aria-labelledby="competencia-comportamental">
-          <div class="section-title"><h2 id="competencia-comportamental">Competências Comportamentais</h2></div>
-          <ul class="small">
-            <li>Liderança técnica e mentoria</li>
-            <li>Comunicação clara com times e clientes</li>
-            <li>Proatividade e foco em documentação</li>
-            <li>Gestão de conflitos e feedback construtivo</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top:16px" aria-labelledby="idiomas">
-          <div class="section-title"><h2 id="idiomas">Idiomas</h2></div>
-          <div class="small">Português (nativo)</div>
-          <div class="small" style="margin-top:6px">Inglês (técnico/avançado — leitura e comunicação em ambiente técnico)</div>
-        </div>
-      </aside>
-    </div>
-
-    <footer>
-      <div>Currículo gerado automaticamente — revise e ajuste conforme desejar.</div>
-      <div style="margin-top:6px" class="small">Se quiser, eu adapto para PDF, Markdown (README.md) ou insiro diretamente no repositório com comandos git.</div>
-    </footer>
+    <section class="section">
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Português – Nativo</li>
+        <li>Inglês – Intermediário</li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
