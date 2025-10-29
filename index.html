@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currículo — Celso Mendes Lima</title>
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --accent:#0b63d0; --muted:#6b7280;
+      --maxw:900px; --radius:12px; --pad:20px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg),#eef2f6); color:#0f1724;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:32px; display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--maxw);}
+    .header{
+      display:flex; gap:20px; align-items:center; margin-bottom:18px;
+    }
+    .photo{
+      width:96px; height:96px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#1177e6);
+      display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:28px;
+      flex-shrink:0;
+    }
+    .title h1{margin:0; font-size:22px}
+    .title p{margin:4px 0 0 0; color:var(--muted); font-size:14px}
+    .grid{display:grid; grid-template-columns: 1fr 320px; gap:20px; align-items:start;}
+    .card{background:var(--card); border-radius:var(--radius); padding:var(--pad); box-shadow: 0 6px 18px rgba(14,30,60,0.06);}
+    .section-title{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
+    .section-title h2{margin:0; font-size:16px; color:var(--accent)}
+    .muted{color:var(--muted); font-size:14px}
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef6ff; color:var(--accent); font-weight:600; font-size:13px}
+    ul{margin:0; padding-left:18px}
+    .skill-list{display:flex; flex-wrap:wrap; gap:8px}
+    .skill{background:#f3f7fb; padding:6px 10px; border-radius:999px; font-size:13px; color:#123}
+    .contact-item{font-size:14px; color:#0b1724; margin-bottom:6px}
+    .small{font-size:13px; color:var(--muted)}
+    .timeline{border-left:3px solid #eef2f6; padding-left:14
