@@ -5,33 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Celso Mendes Lima</title>
   <style>
+    /* Estilos para compactação OBRIGATÓRIA para 2 páginas */
     body {
       font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 15px; /* Fonte menor */
       margin: 0;
       background: #f5f7fa;
       color: #333;
     }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 1100px; 
+      margin: 20px auto; 
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      padding: 30px; 
     }
+    
+    /* OTIMIZAÇÃO CRÍTICA PARA IMPRESSÃO */
+    @media print {
+        body {
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%; 
+            margin: 0;
+            padding: 15px 30px; /* Margem interna reduzida para economizar espaço vertical */
+            box-shadow: none; 
+            border-radius: 0;
+        }
+    }
+    
+    /* Estilos de conteúdo ajustados para compactação máxima */
     header {
       text-align: center;
       border-bottom: 2px solid #0073b1;
-      padding-bottom: 20px;
+      padding-bottom: 15px; 
     }
     header h1 {
       margin: 0;
       color: #0073b1;
-      font-size: 2em;
+      font-size: 2em; 
     }
     header p {
-      margin: 5px 0;
-      font-size: 1.1em;
+      margin: 3px 0;
+      font-size: 1em;
     }
     a {
       color: #0073b1;
@@ -40,101 +60,190 @@
     h2 {
       border-left: 4px solid #0073b1;
       padding-left: 10px;
-      margin-top: 30px;
+      margin-top: 25px; 
+      margin-bottom: 5px;
       color: #0073b1;
       font-size: 1.4em;
     }
     .section {
       margin-top: 15px;
     }
+    
     .job {
-      margin-bottom: 20px;
+      margin-bottom: 15px; /* Mais redução aqui */
+      border-bottom: 1px dashed #eee; 
+      padding-bottom: 10px;
     }
+    .job:last-child {
+        border-bottom: none;
+    }
+
     .job-title {
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.1em; 
+      color: #0073b1;
+      margin-bottom: 0;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      line-height: 1.2;
     }
     .job-company {
       color: #555;
       font-style: italic;
+      font-size: 1em;
+      margin-top: 3px;
     }
     .job-period {
       color: #888;
       font-size: 0.95em;
     }
+    
+    /* Lista de responsabilidades mais apertada */
     ul {
-      margin-top: 8px;
+      margin-top: 5px;
+      padding-left: 20px;
     }
+    ul li {
+        margin-bottom: 2px; /* Redução máxima do espaço entre itens de lista */
+        line-height: 1.3;
+        font-size: 0.95em;
+    }
+
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 100px; 
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      margin-top: 10px;
+      margin-top: 5px;
+    }
+
+    .skills-list {
+        list-style-type: none;
+        padding: 0;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px 15px; 
+        margin-top: 8px;
+    }
+    .skills-list li {
+        background-color: #e6f3ff;
+        color: #0073b1;
+        padding: 5px 10px; 
+        border-radius: 4px;
+        font-size: 0.9em; 
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+
+    .education-item, .language-item {
+        margin-bottom: 5px;
+    }
+    .education-item p {
+        margin: 0;
+        line-height: 1.3;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <img src="https://raw.githubusercontent.com/mendescelso/Curriculo/main/foto.png" alt="Foto de Celso Mendes Lima" class="profile-pic">
+     <!-- <img src="foto.jpeg" alt="Celso Mendes Lima" class="profile-pic"> -->
       <h1>Celso Mendes Lima</h1>
-      <p>Site Reliability Engineer (SRE) / Tech Lead de Operações</p>
-      <p>📍 São Paulo, SP | 📧 <a href="mailto:mendes.celso@hotmail.com">mendes.celso@hotmail.com</a> | 💼 <a href="https://linkedin.com/in/mendescelso" target="_blank">linkedin.com/in/mendescelso</a></p>
+      <p>SRE - Cloud</p>
+      <p>📍 São Paulo, SP | 📧 <a href="mailto:mendes.celso@hotmail.com">mendes.celso@hotmail.com</a> | 💼 <a href="https://www.linkedin.com/in/celsomendes-sre/" target="_blank">linkedin.com/in/celsomendes-sre</a></p>
     </header>
 
     <section class="section">
       <h2>Resumo Profissional</h2>
-      <p>Profissional com mais de 10 anos de experiência em infraestrutura de TI, operações e confiabilidade de sistemas. Atualmente atuando como <strong>Site Reliability Engineer (SRE)</strong> e <strong>Tech Lead</strong> na NAVA, liderando uma equipe de analistas com foco em disponibilidade, automação, observabilidade e melhoria contínua de ambientes críticos on-premises e cloud.</p>
+      <p>Profissional com mais de 10 anos de experiência em Infraestrutura de TI, Operações e Confiabilidade de Sistemas, com atuação atual como Site Reliability Engineer (SRE). Na NAVA, atua com foco em alta disponibilidade, automação, observabilidade e melhoria contínua, garantindo a estabilidade e escalabilidade de ambientes críticos <em>on-premises</em> e em <em>cloud</em>.</p>
     </section>
 
     <section class="section">
       <h2>Experiência Profissional</h2>
 
       <div class="job">
-        <div class="job-title">Site Reliability Engineer (SRE) / Tech Lead de Operações</div>
-        <div class="job-company">NAVA Technology for Business</div>
-        <div class="job-period">ago de 2020 - atualmente</div>
+        <div class="job-title">Tech Lead & Analista DevOps/SRE</div>
+        <div class="job-header">
+            <div class="job-company">NAVA - Technology for Business</div>
+            <div class="job-period">Nov/2023 - Atualmente</div>
+        </div>
         <ul>
-          <li>Liderança técnica de equipe com 4 analistas, atuando em ambientes híbridos (on-premises e cloud).</li>
-          <li>Responsável pela confiabilidade, observabilidade e automação de processos de infraestrutura.</li>
-          <li>Desenvolvimento de scripts e integrações para suporte a pipelines e monitoramento.</li>
-          <li>Criação de documentações técnicas, treinamentos internos e planos de desenvolvimento individuais.</li>
-          <li>Interação com clientes como ConectCar, Liberty, Claro EPS, Fidelity e outros ambientes corporativos.</li>
+          <li>Atuação como Analista SRE, gestão de infra clusterizada, <em>on-premises</em> e <em>Cloud</em>, aplicando práticas de confiabilidade, automação e observabilidade em ambientes críticos.</li>
+          <li>Gestão de incidentes críticos, definição e monitoramento e condução de <em>Post-mortems</em> para garantir a não recorrência de falhas.</li>
+          <li>Colaboração em arquitetura de soluções DevOps/SRE, com foco em alta disponibilidade e performance em sistemas de missão crítica (Clientes como ConectCar, Liberty(Yelum) e Claro, entre outros).</li>
+        </ul>
+      </div>
+      
+      <div class="job">
+        <div class="job-title">Analista de Suporte a Sistemas Pleno 1 (Transição para SRE)</div>
+        <div class="job-header">
+            <div class="job-company">NAVA - Technology for Business</div>
+            <div class="job-period">Set/2020 - Nov/2023</div>
+        </div>
+        <ul>
+          <li>Atuei como elo entre Suporte e Engenharia, focando na <strong>automação de tarefas repetitivas</strong> (<em>Toil</em>) através de <em>scripting</em> (Bash/Python) para liberar o time de operações.</li>
+          <li>Garantia da <strong>estabilidade e <em>uptime</em></strong> de ambientes produtivos, identificando <em>gaps</em> operacionais e propondo melhorias de infraestrutura.</li>
+          <li>Implementação e manutenção de um <strong>Sistema de Monitoramento</strong> para cobertura completa da infraestrutura, configurando alertas preditivos.</li>
+          <li>Gerenciamento e resolução de <strong>Incidentes de Nível 2</strong> registrados no <strong>JIRA</strong>, aplicando análise de causa raiz para solucionar problemas e evitar recorrências.</li>
         </ul>
       </div>
 
       <div class="job">
-        <div class="job-title">Analista de TI 3</div>
-        <div class="job-company">Soft Trade</div>
-        <div class="job-period">nov de 2013 - jan de 2019</div>
+        <div class="job-title">Analista de Sistemas e Suporte (NAVA)</div>
+        <div class="job-header">
+            <div class="job-company">NAVA - Technology for Business</div>
+            <div class="job-period">Ago/2019 - Mai/2020</div>
+        </div>
         <ul>
-          <li>Administração de servidores Windows e Linux.</li>
-          <li>Gerenciamento e suporte de serviços </li>
-          <li>Gerenciamento de rede, suporte técnico e manutenção de banco de dados.</li>
-          <li>Monitoramento de aplicações e atendimento a incidentes de infraestrutura.</li>
+          <li>Administração e operação de servidores <strong>Linux</strong>, garantindo a manutenção básica da infraestrutura de sistemas.</li>
+          <li>Responsável pela inclusão e configuração de sistemas e equipamentos na ferramenta de <strong>monitoramento</strong>, estabelecendo alertas operacionais.</li>
+          <li>Execução de análise e <strong>suporte de Nível 1 e 2</strong> para correção de erros em sistemas, consultando e extraindo dados do <strong>Banco de Dados MySQL</strong> para <em>troubleshooting</em>.</li>
+          <li>Atendimento e gestão de chamados operacionais de sistemas e infraestrutura via <strong>JIRA</strong>, garantindo a documentação do processo de correção.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Analista de T.I. 3 (Infraestrutura e Sistemas)</div>
+        <div class="job-header">
+            <div class="job-company">Soft Trade</div>
+            <div class="job-period">Nov/2013 - Jan/2019</div>
+        </div>
+        <ul>
+          <li>Projetos de engenharia de infraestrutura <em>full-stack</em>, incluindo <strong>instalação, configuração e administração de Servidores Linux e Windows (SQL Server)</strong>.</li>
+          <li>Administração de ambientes virtualizados (<strong>Hyper-V</strong>) e servidores de aplicação (<strong>Tomcat</strong>), otimizando a alocação de recursos.</li>
+          <li>Experiência sólida em infraestrutura mista e segurança de rede (TMG, Active Directory), garantindo a <strong>conectividade, governança e resiliência</strong> de sistemas críticos <em>on-premise</em>.</li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <h2>Formação Acadêmica</h2>
-      <p><strong>Tecnólogo em Gestão da Tecnologia da Informação</strong> – Universidade Paulista
-(UNIP), Brasil</p>
+      <h2>Competências Técnicas</h2>
+      <ul class="skills-list">
+        <li>Linux Server</li>
+        <li>Kubernetes (AKS, EKS e GKE)</li>
+        <li>Docker & Containerização</li>
+        <li>Azure Cloud</li>
+        <li>Amazon Web Services (AWS)</li>
+        <li>Monitoramento & Observabilidade</li>
+        <li>Gestão de Incidentes</li>
+        <li>CI/CD & Automação</li>
+        <li>Banco de Dados (MySQL, SQL Server)</li>
+        <li>Virtualização (Hyper-V)</li>
+        <li>Scripting (Bash, Python)</li>
+        <li>JIRA & Gestão de Tickets</li>
+      </ul>
     </section>
 
-   
     <section class="section">
-      <h2>Competências Técnicas</h2>
-      <ul>
-        <li>Curso Azure gerencie Kubernetes com AKS e ACR - Alura</li>
-        <li>Curso Cadeia de valor de serviços_ conhecendo as 4 dimensões</li>
-        <li>Curso Criação de valor conhecendo os conceitos-chave para gerenciamento de serviços</li>
-        <li>Curso Docker criando e gerenciando containers</li>
-        <li>Curso Kubernetes Deployments, Volumes e Escalabilidade</li>
-        <li>Curso Kubernetes Pods, Services e ConfigMaps</li>
-        <li>Curso Docker criando e gerenciando containers</li>
-      </ul>
+      <h2>Formação Acadêmica</h2>
+      <div class="education-item">
+        <p><strong>Tecnólogo em Gestão da Tecnologia da Informação</strong> – Universidade Paulista (UNIP), Brasil</p>
+      </div>
     </section>
 
     <section class="section">
